@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+p {
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0 3rem;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.banner {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.banner .banner-image-container {
+  background-color: rgb(46, 130, 185);
+  border: 1px solid grey;
+  height: 12em;
+}
+
+.banner .banner-text {
+  margin-left: 2em;
+}
+
+section {
+  margin: 2rem 0;
+  max-height: 10%
+}
+
+section.one,
+section.two {
+  display: grid;
+  grid-gap: 1.5rem;
+}
+
+section.one {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+section.two {
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5 3rem;
+}
+
+section .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+section .card .card-image-container {
+  background-color: lightblue;
+  height: 7rem;
+}
+
+section .card .footer {
+  background-color: rgb(209, 210, 205);
+  height: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 615px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  .banner {
+    grid-template-columns: 1fr;
+  }
+
+  .banner-text {
+    margin: 2rem 0;
+  }
+
+  .banner .banner-text {
+    margin-left: 0;
+  }
+
+  section.one {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  section.two {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  section .card .footer {
+    margin-top: 1rem;
+  }
+
+  section.two .card .footer:nth-child(2) {
+    display: none;
+  }
+}
